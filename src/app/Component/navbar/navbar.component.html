@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">MyApp</a>
+      <button class="navbar-toggler" type="button" (click)="toggleMenu()">
+        <span *ngIf="!isOpen" class="navbar-toggler-icon"></span>
+        <span *ngIf="isOpen" class="close-icon">✖</span>
+      </button>
+      
+      <div class="collapse navbar-collapse" [ngClass]="{ 'show': isOpen }">
+        <ul class="navbar-nav ms-auto">
+          <li *ngFor="let section of sections" class="nav-item">
+            <a [routerLink]="'/' + section.toLowerCase()" class="nav-link" (click)="toggleMenu()">
+              {{ section }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
