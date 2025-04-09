@@ -1,0 +1,238 @@
+/* *{
+    color: aliceblue;
+}
+
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15vh 0%;
+    background-color: black;
+    color: #ffffff;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .content {
+    max-width: 600px;
+  }
+  
+  .content h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+  }
+  
+  .content .highlight {
+    color: #00e5ff;
+  }
+  
+  .content h2 {
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  
+  .content .role {
+    color: #ff6ec4;
+  }
+  
+  .content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #ccc;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+  }
+  
+  .btn.primary {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+  }
+  
+  .btn.secondary {
+    background: transparent;
+    border: 2px solid #6e8efb;
+    color: #6e8efb;
+  }
+  
+  .btn.primary:hover,
+  .btn.secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(110, 142, 251, 0.3);    
+  }
+
+  .profile-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: orange;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .profile-image img:hover {
+    border: 5px solid #ff9800;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+   */
+
+
+* {
+    color: aliceblue;
+}
+
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15vh 0%;
+    background-color: black;
+    color: #ffffff;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.content {
+    max-width: 600px;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeInUp 1s ease-out forwards; /* Fade-in and slide-up animation */
+    animation-delay: 0.2s; /* Slight delay for smoothness */
+}
+
+.content h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.content .highlight {
+    color: #00e5ff;
+    display: inline-block;
+    animation: bounceIn 0.8s ease-out; /* Bounce effect for name */
+}
+
+.content h2 {
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.content .role {
+    color: #ff6ec4;
+    display: inline-block;
+    animation: bounceIn 0.8s ease-out 0.4s; /* Delayed bounce for role */
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #ccc;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards 0.6s; /* Fade-in for paragraph */
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    /* No animation for buttons */
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s; /* Keep hover transition */
+    font-weight: 500;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+}
+
+.btn.primary:hover {
+    transform: scale(1.05); /* Simplified hover, no tilt */
+    box-shadow: 0 4px 20px rgba(110, 142, 251, 0.5);
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 2px solid #6e8efb;
+    color: #6e8efb;
+}
+
+.btn.secondary:hover {
+    transform: scale(1.05); /* Simplified hover, no tilt */
+    box-shadow: 0 4px 20px rgba(110, 142, 251, 0.3);
+    border-color: #00e5ff; /* Border color change on hover */
+}
+
+.profile-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: orange;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+    /* No spin-in animation */
+}
+
+.profile-image img:hover {
+    border: 5px solid #ff9800;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframe Animations (only for retained elements) */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
