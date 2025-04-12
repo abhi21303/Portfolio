@@ -94,3 +94,43 @@
     color: #0baca4;
   }
   
+  /* Media Query for Tablets (max-width: 768px) */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 30px 15px;
+    }
+  
+    .contact-title {
+      font-size: 38px;
+      margin-bottom: 25px;
+    }
+  
+    .contact-subtitle {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .contact-button {
+      padding: 10px 18px;
+      font-size: 15px;
+    }
+  }
+  
+  /* Media Query for Mobile Devices (max-width: 480px) */
+  @media (max-width: 480px) {
+    .contact-container {
+      padding: 20px 10px;
+    }
+  
+    .contact-title {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  

@@ -1,0 +1,37 @@
+.footer {
+  background-color: #030303;
+  color: #e0e0e0;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.social-links {
+  margin-bottom: 15px;
+}
+
+.social-links a {
+  margin: 0 10px;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0;
+}
+.social-links img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 5px; /* This line add radius to make it beautiful*/
+  background-color: white /* This line adds a background to the image*/
+}
