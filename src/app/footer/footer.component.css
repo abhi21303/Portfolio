@@ -35,3 +35,11 @@
   border-radius: 5px; /* This line add radius to make it beautiful*/
   background-color: white /* This line adds a background to the image*/
 }
+
+.mail img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 5px; /* This line add radius to make it beautiful*/
+  background-color: black /* This line adds a background to the image*/
+}
